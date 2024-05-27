@@ -1,4 +1,11 @@
 # library doc string
+'''
+Purpose: This project is to show what has been learned through out the module for best coding practices.
+
+Author: Anna Papadogiannakis
+Date: May 18, 2024
+
+'''
 """
 import sklearn and panda libs
 """
