@@ -88,7 +88,7 @@ def encoder_helper(dataframe, category_lst, response=""):
         category_groups = dataframe.groupby(category).mean()["Churn"]
         for val in dataframe[category]:
             category_col_lst.append(category_groups.loc[val])
-        dataframe[f"{category}_{response}_Churn"] = category_col_lst
+        dataframe[f"{category}_Churn"] = category_col_lst
     return dataframe
 
 def perform_feature_engineering(dataframe,response=""):
