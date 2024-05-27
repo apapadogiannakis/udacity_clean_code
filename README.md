@@ -9,27 +9,49 @@ This project is to show what has been learned through out the module for best co
 Overview of the files and data present in the root directory. 
 
 data
+
 |-bank_data.csv - input csv data
+
 images
+
 |-eda
+
 |---churn_distribution.png - image generated from eda
+
 |---customer_age_distribution.png - image generated from eda
+
 |---heatmap.png - image generated from eda
+
 |---marital_status_distribution.png - image generated from eda
+
 |---total_transaction_distribution.png- image generated from eda
+
 |-results
+
 |---feature_importance.png- image generated feature importance
+
 |---logistics_results.png- image generated from results
+
 |---rf_results.png- image generated from results
+
 |---roc_curve_result.png- image generated from results
+
 logs
+
 |-churn_library.log- log generated from running tests
+
 models
+
 |-logistic_model.pkl - logistics model generated 
+
 |-rfc_model.pkl - rfc model generated 
+
 churn_library.py - predict customer churn code
+
 churn_notebook.ipynb - original notebook
+
 churn_script_logging_and_tests.py - script tests
+
 README.md
 
 There is a images directory for outputed images by churn_library.py the  and logs directory outputed by churn_script_logging_and_tests.py
