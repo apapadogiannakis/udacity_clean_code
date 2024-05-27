@@ -54,13 +54,20 @@ churn_script_logging_and_tests.py - script tests
 
 README.md
 
+requirements_py3.6.txt - python 3.6 requirements
+
+requirements_py3.8.txt - python 3.6 requirements
+
 There is a images directory for outputed images by churn_library.py the  and logs directory outputed by churn_script_logging_and_tests.py
 
 ## Running Files
 
 churn_library.py can be run directly via python and should run data processing and model creation for data in ./data/bank_data.csv.
 
+Code Library dependency requirements are outlined in requirements_py3.6.txt
+
 ```
+python -m pip install -r requirements_py3.6.txt
 python churn_library.py
 ```
 
