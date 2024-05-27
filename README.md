@@ -7,7 +7,7 @@ This project is to show what has been learned through out the module for best co
 
 ## Files and data description
 Overview of the files and data present in the root directory. 
-
+```
 data
 
 |-bank_data.csv - input csv data
@@ -57,6 +57,7 @@ README.md
 requirements_py3.6.txt - python 3.6 requirements
 
 requirements_py3.8.txt - python 3.6 requirements
+```
 
 There is a images directory for outputed images by churn_library.py the  and logs directory outputed by churn_script_logging_and_tests.py
 
