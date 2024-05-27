@@ -57,10 +57,14 @@ README.md
 There is a images directory for outputed images by churn_library.py the  and logs directory outputed by churn_script_logging_and_tests.py
 
 ## Running Files
-How do you run your files? What should happen when you run your files?
+
 churn_library.py can be run directly via python and should run data processing and model creation for data in ./data/bank_data.csv.
 
+python churn_library.py
+
 churn_script_logging_and_tests.py can be run via pytest to run tests for functions created in churn_library.py
+
+pytest churn_script_logging_and_tests.py
 
 
 
