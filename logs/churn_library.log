@@ -1,0 +1,9 @@
+root - INFO - Testing import_data: SUCCESS
+root - INFO - Testing perform_eda: SUCCESS - histogram plot created.
+root - INFO - Testing perform_eda: SUCCESS -  churn distribution plot created.
+root - INFO - Testing perform_eda: SUCCESS -  customer age distribution plot created.
+root - INFO - Testing test_perform_feature_engineering: SUCCESS - has the correct number of rows
+root - INFO - Testing encoder helper: SUCCESS - category columns exists
+root - INFO - Testing train_models: SUCCESS - logistics_results.png is created
+root - INFO - Testing train_models: SUCCESS - rf_restults.png is created
+root - INFO - Testing train_models: SUCCESS - rfc_model.pkl is created
