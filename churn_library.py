@@ -61,19 +61,27 @@ def perform_eda(dataframe):
     sns.set()
     plt.figure(figsize=(20, 10))
     dataframe["Churn"].hist()
+    plt.savefig("./images/eda/churn_distribution.png")
     plt.figure(figsize=(20, 10))
+    
     dataframe["Customer_Age"].hist()
+    plt.savefig("./images/eda/customer_age_distribution.png")
     plt.figure(figsize=(20, 10))
+    
     dataframe.Marital_Status.value_counts("normalize").plot(kind="bar")
+    plt.savefig("./images/eda/marital_status_distribution.png")
     plt.figure(figsize=(20, 10))
+    
     # distplot is deprecated. Use histplot instead
     # sns.distplot(df['Total_Trans_Ct']);
     # Show distributions of 'Total_Trans_Ct' and add a smooth curve obtained
     # using a kernel density estimate
     sns.histplot(dataframe["Total_Trans_Ct"], stat="density", kde=True)
+    plt.savefig("./images/eda/total_transaction_distribution.png")
     plt.figure(figsize=(20, 10))
+    
     sns.heatmap(dataframe.corr(), annot=False, cmap="Dark2_r", linewidths=2)
-    plt.savefig("./images/histogram.png")
+    plt.savefig("./images/eda/histogram.png")
     plt.close()
 
 
@@ -195,6 +203,7 @@ def classification_report_image(y_train,
     plt.text(0.01, 0.7, str(classification_report(y_train,
                                                   y_train_preds_rf)),
              {'fontsize': 10}, fontproperties = 'monospace')
+    plt.savefig("./images/results/rf_results.png")
     # approach improved by OP -> monospace!
     plt.axis('off')
     plt.rc('figure', figsize=(5, 5))
@@ -206,11 +215,12 @@ def classification_report_image(y_train,
     # approach improved by OP -> monospace!
     plt.text(0.01, 0.6, str('Logistic Regression Test'),
              {'fontsize': 10}, fontproperties = 'monospace')
+    
     plt.text(0.01, 0.7, str(classification_report(y_test, y_test_preds_lr)),
              {'fontsize': 10}, fontproperties = 'monospace')
     # approach improved by OP -> monospace!
     plt.axis('off')
-    plt.savefig("./images/classification_report.png")
+    plt.savefig("./images/results/logistics_results.png")
     plt.close()
 
 def feature_importance_plot(model, x_data, output_pth):
@@ -283,6 +293,7 @@ def train_models(x_train, x_test, y_train, y_test):
     lrc_plot = plot_roc_curve(lrc, x_test, y_test)
     # plots
     plt.figure(figsize=(15, 8))
+    
     ax_gca = plt.gca()
     #rfc_disp = plot_roc_curve(cv_rfc.best_estimator_, x_test, y_test, ax=ax_gca, alpha=0.8)
     lrc_plot.plot(ax=ax_gca, alpha=0.8)
@@ -301,8 +312,9 @@ def train_models(x_train, x_test, y_train, y_test):
     explainer = shap.TreeExplainer(cv_rfc.best_estimator_)
     shap_values = explainer.shap_values(x_test)
     shap.summary_plot(shap_values, x_test, plot_type="bar")
+    plt.savefig("./images/results/roc_curve_result.png")
     feature_importance_plot(cv_rfc, x_test,
-                            "./images/feature_importance.png")
+                            "./images/results/feature_importance.png")
 
 if __name__ == "__main__":
     imported_dataframe = import_data(pth="./data/bank_data.csv")
